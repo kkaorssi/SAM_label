@@ -1,0 +1,31 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>icon/object_detect.png</file>
+    <file>icon/tools.png</file>
+    <file>icon/reset.png</file>
+    <file>icon/list.png</file>
+    <file>icon/delete.png</file>
+    <file>icon/save.png</file>
+    <file>icon/add.png</file>
+    <file>icon/edit.png</file>
+    <file>icon/minus.png</file>
+    <file>icon/add.png</file>
+    <file>icon/back_arrow.png</file>
+    <file>icon/delete.png</file>
+    <file>icon/edit.png</file>
+    <file>icon/exit.png</file>
+    <file>icon/folder_open.png</file>
+    <file>icon/image.png</file>
+    <file>icon/list.png</file>
+    <file>icon/minus.png</file>
+    <file>icon/next_arrow.png</file>
+    <file>icon/object.png</file>
+    <file>icon/redo.png</file>
+    <file>icon/reset.png</file>
+    <file>icon/save.png</file>
+    <file>icon/tools.png</file>
+    <file>icon/trash.png</file>
+    <file>icon/undo.png</file>
+    <file>icon/object.png</file>
+  </qresource>
+</RCC>
