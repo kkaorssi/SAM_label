@@ -1,6 +1,6 @@
 # Segment Anything Model (SAM) 기반 이미지 레이블링 도구
 ## Overview
-이 프로젝트는 Meta AI에서 개발한 **Segment Anything Model (SAM)**을 기반으로 이미지에 레이블링 작업을 도와주는 도구입니다.
+이 프로젝트는 Meta AI에서 개발한 **Segment** **Anything** **Model** (SAM)을 기반으로 이미지에 레이블링 작업을 도와주는 도구입니다.
 **PyQt5**를 사용하여 사용자 인터페이스(UI)를 구축하였으며, 사용자는 이 도구를 통해 이미지를 불러오고, SAM을 적용하여 자동으로 세그먼트된 영역을 생성한 후, 이를 기반으로 레이블링 작업을 수행할 수 있습니다.
 
 ## Key Features
