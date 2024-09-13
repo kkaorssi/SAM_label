@@ -54,6 +54,7 @@ class WindowClass(QMainWindow, mainwindow) :
         self.actionNext_Image.triggered.connect(self.fileio.next_image)
         self.actionPrev_Image.triggered.connect(self.fileio.prev_image)
         self.actionQuit.triggered.connect(self.close)
+        self.actionSave.triggered.connect(self.fileio.save)
         
         # Edit
         self.actionSet_Image.triggered.connect(self.canvas.set_image)

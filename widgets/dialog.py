@@ -22,7 +22,7 @@ class input_name(QDialog):
         return self.input_edit.text()
     
 def choose_mode(parent):
-    items = ('Auto', 'Manual')
+    items = ('Manual', 'Auto')
     item, ok = QInputDialog.getItem(parent, 'Choose predictor mode',
                                     'Options: ', items, 0, False)
 

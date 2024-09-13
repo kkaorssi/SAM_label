@@ -2,6 +2,9 @@ from PyQt5.QtWidgets import *
 
 import os
 import pandas as pd
+import json
+import cv2
+import numpy as np
 
 class tools:
     def __init__(self, mainwindow):
@@ -60,8 +63,40 @@ class tools:
             print("No prev image")
 
     def save(self):
-        print('file saved')
+        json_data = {
+            "version": "5.1.1",
+            "flags": {},
+            "shapes": [],
+            "imagePath": os.path.basename(self.mainwindow.canvas.filename),
+            "imageData": None,
+            "imageHeight": self.mainwindow.canvas.qpixmap.height(),
+            "imageWidth": self.mainwindow.canvas.qpixmap.width()
+        }
+        
+        for i in range(self.mainwindow.dockers.objlist.count()):
+            item = self.mainwindow.dockers.objlist.item(i)
+            label = item.text()
+            
+            mask = np.array(self.mainwindow.canvas.mask, dtype=np.uint8)
+            edges = cv2.Canny(mask * 255, 100, 200) 
+            points = np.argwhere(edges > 0)
+            points_list = points.tolist() 
 
+            shape_data = {
+                "label": label,
+                "points": points_list,
+                "group_id": None,
+                "shape_type": "polygon",
+                "flags": {}
+            }
+            json_data["shapes"].append(shape_data)
+        
+        f_name, f_ext = os.path.splitext(self.mainwindow.canvas.filename)
+        save_path = f"{f_name}.json"
+        with open(save_path, 'w') as json_file:
+            json.dump(json_data, json_file, indent=4)
+            print(f"JSON file saved to {save_path}")
+            
     # def save_as(self):
 
     # def save_auto(self):

@@ -55,10 +55,10 @@ class iamge_label(QLabel):
                 return
             objIdx = self.mainwindow.dockers.objlist.currentRow()
             if self.mainwindow.edit_mode == 'add':
-                mask = self.mainwindow.manager.add_point(self.filename, objIdx, input_point, self.mode)
+                self.mask = self.mainwindow.manager.add_point(self.filename, objIdx, input_point, self.mode)
             elif self.mainwindow.edit_mode == 'exclude':
-                mask = self.mainwindow.manager.exclude_point(self.filename, objIdx, input_point, self.mode)
-            newpixmap = show_mask(self.filename, mask, self.color)
+                self.mask = self.mainwindow.manager.exclude_point(self.filename, objIdx, input_point, self.mode)
+            newpixmap = show_mask(self.filename, self.mask, self.color)
             self.setPixmap(newpixmap)
             
     def display_image(self, filename):

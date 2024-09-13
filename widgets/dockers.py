@@ -42,6 +42,8 @@ class list_docker:
     def add_obj(self, label):
         item = QListWidgetItem(label, self.mainwindow.dockers.objlist)
         self.mainwindow.dockers.objlist.setCurrentItem(item)
+        self.mainwindow.actionSave.setEnabled(True)
+        self.mainwindow.actionSave_As.setEnabled(True)
     
     def object_changed(self, current, previous):
         if self.objlist.currentItem():
