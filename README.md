@@ -12,6 +12,9 @@
 - 기능 개발 예정:
     - Auto Mode: SAM의 Auto Mode를 적용할 수 있도록 업데이트 예정입니다.
     - Undo/Redo: 작업 내역을 취소(Undo)하거나 다시 실행(Redo)할 수 있는 기능이 추가될 예정입니다.
+
+## Run Video
+<img src=|https://github.com/user-attachments/assets/4cdb433f-4886-4756-8aaf-01663e8f6299">
  
 ## License
 이 프로젝트는 Apache License 2.0에 따라 배포됩니다.
